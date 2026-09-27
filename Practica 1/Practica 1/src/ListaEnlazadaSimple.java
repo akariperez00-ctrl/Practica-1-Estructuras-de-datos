@@ -1,14 +1,14 @@
 public class ListaEnlazadaSimple {
 
-    // Atributo principal de la lista
+    
     private NodoLista primero;
 
-    // Constructor
+   
     public ListaEnlazadaSimple() {
         primero = null;
     }
 
-    // Getters y Setters
+  
     private NodoLista getPrimero() {
         return primero;
     }
@@ -17,12 +17,11 @@ public class ListaEnlazadaSimple {
         this.primero = primero;
     }
 
-    // Operación para verificar si está vacía
+   
     public boolean estaVacia() {
         return primero == null;
     }
 
-    // Insertar al final de la lista de resueltos
     public void insertarFin(Ticket ticket) {
         NodoLista nodo = new NodoLista(ticket);
         if (estaVacia()) {
@@ -36,7 +35,7 @@ public class ListaEnlazadaSimple {
         temp.setSiguiente(nodo);
     }
 
-    // Buscar un ticket resuelto por su ID único
+ 
     public Ticket buscarPorId(int id) {
         if (estaVacia()) {
             return null;
@@ -51,7 +50,6 @@ public class ListaEnlazadaSimple {
         return null;
     }
 
-    // Mostrar todos los tickets resueltos
     public void mostrarLista() {
         if (estaVacia()) {
             System.out.println("No hay tickets resueltos en el historial.\n");
@@ -63,8 +61,7 @@ public class ListaEnlazadaSimple {
             temp = temp.getSiguiente();
         }
     }
-
-    // Clase interna Nodo
+    
     public class NodoLista {
 
         private Ticket ticket;
